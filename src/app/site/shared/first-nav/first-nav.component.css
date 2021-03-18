@@ -1,0 +1,151 @@
+#first-nav-container{
+    background-color: #0D8E95;
+    height: 28px;
+}
+
+.fa-phone {
+    -ms-transform: rotate(110deg);
+    /* IE 9 */
+    -webkit-transform: rotate(110deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(110deg);
+}
+
+#nav-phone{
+    width: 150px;
+    margin-right: 10px;
+}
+
+#nav-email{
+    width: 290px;
+}
+
+#refill-center{
+    width: 30.5%;
+}
+
+#refill-left{
+    width: 14%;
+}
+
+#refill-right{
+    width: 90px;
+}
+
+@media only screen and (max-width:1199px) {
+    /* For mobile phones: */
+    #refill-center{
+        width: 23%;
+    }
+}
+@media only screen and (max-width:1100px) {
+    /* For mobile phones: */
+    #refill-center{
+        width: 22%;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    /* For mobile phones: */
+    #refill-center{
+        width: 21%;
+    }
+}
+
+@media only screen and (max-width:990px) {
+    /* For mobile phones: */
+    #refill-center{
+        width: 11%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    /* For mobile phones: */
+    #refill-center{
+        width: 9%;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    /* For mobile phones: */
+    #refill-center{
+        width: 7%;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    /* For mobile phones: */
+    #refill-center{
+        width: 5%;
+    }
+}
+
+
+
+#nav-text{
+    color: rgb(255, 255, 255);
+}
+
+#nav-flag >img {
+    height: 20px;
+    width: 20px;
+}
+#nav-login{
+    width: 80px;
+    cursor: pointer;
+}
+#nav-donate{
+    background-color: #774F38;
+    height: 28px;
+    padding-left: 7px;
+    width: 90px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+.dropdown-menu > a{
+    color: #774F38;
+}
+
+/*css reni*/
+/* navbar */
+
+
+nav {
+    background-color: #ffffff;
+    box-shadow: 0px 10px 15px -10px;
+}
+
+#navbarSupportedContent>ul>li>a {
+    color: #774F38;
+}
+
+.flota {
+    position: absolute;
+    width: 83px;
+    height: 83px;
+    z-index: 12;
+    top: -25px;
+    left: 30px;
+}
+
+#company-name {
+    color: #774F38;
+}
+
+#barra {
+    height: 30px;
+}
+
+@media (min-width: 0px) {
+    .disableWidth720 {
+        display: none !important;
+    }
+}
+
+@media (min-width: 720px) {
+    .disableWidth720 {
+        display: block !important;
+    }
+}

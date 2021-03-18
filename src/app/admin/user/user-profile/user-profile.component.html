@@ -1,0 +1,73 @@
+<div class="row">
+
+  <div class="col-lg-7">
+    <div class="card">
+      <div class="card-body">
+
+        <form ngNativeValidate #f="ngForm" (ngSubmit)="onSubmit( f )" class="form p-t-20">
+          
+          <input hidden [ngModel]="user.id" name="id" type="text">
+          
+          <div class="form-group">
+            <label for="exampleInputuname">User Name</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-user"></i></div>
+              <input [ngModel]="user.name" name="name" type="text" class="form-control" placeholder="User Name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email Address</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-email"></i></div>
+              <input class="form-control" name="email" [(ngModel)]="user.email" type="email" required
+                placeholder="Email Address">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+            <i class="fa fa-save"></i>
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="col-lg-5">
+    <div class="card">
+      <div class="card-body">
+
+        <label class="card-title">Image</label>
+<<<<<<< HEAD
+        <div>
+          <img style="width: 200px;" src="{{user.image}}" alt="">
+        </div>
+=======
+        <form class="col-md-5 ml-0 pl-0">
+
+            If="!imageTemp" src="{{ image }}" class="w150">
+            <img *ngIf="imag<img *ngeTemp" [src]="imageTemp" class="w150">
+
+            <br /><br />
+
+            <div class="form-group">
+                <input (change)="selecImage($event.target.files[0])" type="file">
+            </div>
+
+            <div class="form-group">
+              <angular-file-uploader
+                [config]="afuConfig">
+              </angular-file-uploader>
+            </div>
+
+            <button (click)="imageProfile()" [disabled]="!uploadImage" type="submit" class="btn btn-block btn-success waves-effect waves-light m-r-10">
+                <i class="fa fa-save"></i>
+                Save
+            </button>
+
+        </form>
+>>>>>>> 2a0850b6d90a10fa8bdb54e909a65be0e8276a78
+      </div>
+    </div>
+  </div> -->
+</div>

@@ -1,0 +1,71 @@
+
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+
+
+        <div class="text-right">
+          <button [routerLink]="[ '/admin/list/board/directors' ]"
+            class="btn waves-effect waves-light btn-rounded btn-primary">
+            <i class="fas fa-arrow-alt-circle-left"></i>
+            Back
+          </button>
+        </div>
+
+        <div class="container">
+          <form #form="ngForm" (submit)="onSubmit( form )" autocomplete="off">
+
+            <input hidden name="id" #id="ngModel" [(ngModel)]="board.id">
+
+            <div class="form-group">
+              <label> Name of Board Director</label>
+              <input name="name" #name="ngModel" [(ngModel)]="board.name" class="form-material form-control" required>
+              <div class="validation-error text-danger" *ngIf="name.invalid && name.touched">This field is required.
+              </div>
+            </div>
+
+            <input hidden name="board_directors_fk_En" #board_directors_fk_En="ngModel"
+              [(ngModel)]="boardEn.board_directors_fk">
+            <input hidden name="board_directors_fk_Sp" #board_directors_fk_Sp="ngModel"
+              [(ngModel)]="boardSp.board_directors_fk">
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label> Description English</label>
+                  <input name="descriptionEn" #descriptionEn="ngModel" [(ngModel)]="boardEn.description"
+                    class="form-material form-control" required>
+                  <div class="validation-error text-danger" *ngIf="descriptionEn.invalid && descriptionEn.touched">This
+                    field is required.</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label> Description Spanish</label>
+                  <input name="descriptionSp" #descriptionSp="ngModel" [(ngModel)]="boardSp.description"
+                    class="form-material form-control" required>
+                  <div class="validation-error text-danger" *ngIf="descriptionSp.invalid && descriptionSp.touched">This
+                    field is required.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div *ngIf="board.id == null" class="container col-7">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-success btn-block fas">SAVE <i
+                    class="fas fa-user-plus"></i></button>
+              </div>
+              <div *ngIf="board.id != null" class="container col-7">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-warning btn-block fas">UPDATE <i
+                    class="fas fa-user-edit"></i></button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

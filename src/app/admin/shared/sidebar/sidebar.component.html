@@ -1,0 +1,34 @@
+<aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li class="user-profile">
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                        <img src="{{ image }}" width="100px" height="30px"  alt="image"/>
+                        <span class="hide-menu text-capitalize"> {{ name }} </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="[ '/admin/user/profile', id ]" routerLinkActive="active">My Profile </a></li>
+                        <li><a *ngIf="isAdmin" [routerLink]="[ '/admin/user/list' ]" routerLinkActive="active">Users</a></li>
+                        <li><a href="javascript:void()">Inbox</a></li>
+                        <li><a [routerLink]="[ '/admin/account-settings' ]" routerLinkActive="active">Account Setting</a></li>
+                        <li><a (click)="logout()" href="javascript:void()" class="pointer">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="nav-devider"></li>
+                <!-- <li class="nav-small-cap">MAINTENANCE</li> -->
+
+                <li *ngFor="let item of sideBar.menu"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i [class]="item.icon" ></i><span class="hide-menu">{{item.title}} <span class="label label-rouded label-themecolor pull-right">{{item.submenu.length}}</span></span></a>
+                    <ul *ngFor="let subItem of item.submenu" aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="[ subItem.url ]" routerLinkActive="active" >{{ subItem.title }} </a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</aside>

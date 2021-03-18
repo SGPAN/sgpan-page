@@ -1,0 +1,45 @@
+#container-lotation {
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 75px;
+    text-align: center;
+    position: relative;
+    height: 490px;
+  }
+  
+  #map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    /* For mobile phones: */
+    #map-responsive {
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 100px;
+      min-height: 100px;
+      height: auto;
+      width: auto;
+      margin-top: auto;
+    }
+  }
+  
+  #container-lotation > hr {
+    margin-bottom: 30px;
+  }
+  
+  #location-title {
+    color: #774f38;
+    text-align: center;
+  }

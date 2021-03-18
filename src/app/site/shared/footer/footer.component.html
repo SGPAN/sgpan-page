@@ -1,0 +1,52 @@
+<div *ngFor="let info of companyInfo" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h5>Contact us</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <p><i class="fas fa-phone fa-1x mr-2 "></i>&nbsp; {{info.telephone}}</p>
+                    </li>
+                    <li>
+                        <p><i class="fas fa-envelope fa-1x mr-2 "></i>&nbsp;{{info.email}}</p>
+                    </li>
+                    <li>
+                        <p><i class="fab fa-facebook-f fa-1x mr-2 "></i>&nbsp;{{info.facebook}}</p>
+                    </li>
+                    <li>
+                        <p><i class="fab fa-instagram fa-1x mr-2 "></i>{{info.instagram}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 ">
+            </div>
+            <div class="col-md-5 ">
+                <form>
+                    <fieldset class="form-group ">
+                        <h5>NewsLetter</h5>
+                        <p *ngIf="languageID == 1">Enter your email, we'll send you more information!</p>
+                        <p *ngIf="languageID == 2">Ingresa tu email, te enviaremos más información!</p>
+                        <!-- <input type="email " class="form-control " id="exampleInputEmail1 " placeholder="Enter email "> -->
+                    </fieldset>
+                    <fieldset class="form-group ">
+                        <input type="text " class="form-control " placeholder="email@email.com ">
+                    </fieldset>
+                    <fieldset class="form-group text-xs-right ">
+                        <button style="text-align: center;" type="button " class="btn btn-success btn-block ">
+                            <p *ngIf="languageID == 2">Suscribete</p>
+                            <p *ngIf="languageID == 1">Subscribe</p>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    
+    <div class="footer-copyright text-center mt-3">
+        <a>© Copyright: {{year}} {{info.company_name}}</a>
+    </div>
+    <!-- Copyright -->
+
+</div>

@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: auto;
+    color: white;
+    position: relative;
+    float:bottom;
+}
+
+.footer {
+    background-color: #0d8e95;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #0d8e95;
+}
+
+footer .form-control {
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+  }

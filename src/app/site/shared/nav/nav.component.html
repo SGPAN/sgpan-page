@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand " routerLink="/">
+            <div class="row">
+                <div class="col">
+                    <img src="../../../../assets/images/logo.png" width="30" height="30" class="flota d-inline-block align-top disableWidth720 " alt=" ">
+                </div>
+                <div id="title"  class="col" *ngFor="let info of gwcInfo">
+                    &nbsp;{{info.company_name}}
+                </div>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active dropdown">
+                    <a *ngIf="language == 2" routerLinkActive="active"  class="nav-link dropdown-toggle color_texto" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Asociación Nandamojo
+                    </a>
+
+                    <a *ngIf="language == 1" routerLinkActive="active" class="nav-link dropdown-toggle color_texto" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Nandamojo Association
+                    </a>
+                    
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a *ngIf="language == 1" class="dropdown-item color_texto" routerLink="/" href="aboutUs.html">About us</a>
+                        <a *ngIf="language == 2" class="dropdown-item color_texto" routerLink="/" href="aboutUs.html">Sobre nosotros</a>
+                        <hr>
+                        <a *ngIf="language == 1" class="dropdown-item color_texto" routerLinkActive="active" routerLink="/GuanacasteWatershed" >Guanacaste Watershed</a>
+                        <a *ngIf="language == 2" class="dropdown-item color_texto" routerLinkActive="active" routerLink="/GuanacasteWatershed" >Cuenca de Guanacaste</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item active">
+                    <a *ngIf="language == 1" class="nav-link color_texto" routerLinkActive="active" routerLink="/Beesfortrees" >Bees for Trees</a>
+                    <a *ngIf="language == 2" class="nav-link color_texto" routerLinkActive="active" routerLink="/Beesfortrees" >Abejas por árboles</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a *ngIf="language == 2" class="nav-link color_texto" routerLinkActive="active" routerLink="/" href="eventos.html">Reportes</a>
+                    <a *ngIf="language == 1" class="nav-link color_texto" routerLinkActive="active" routerLink="/" href="eventos.html">Reports</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a *ngIf="language == 1" class="nav-link color_texto" routerLinkActive="active" routerLink="/" href="media.html">Media</a>
+                    <a *ngIf="language == 2" class="nav-link color_texto" routerLinkActive="active" routerLink="/" href="media.html">Multimedia</a>
+                </li>
+
+                <li class="nav-item boton_nav">
+                    <div class="drop-down">
+                        <select id="language" (change) = "switchLanguage($event)" class="btn-group boton_nav">
+                            <option value="1">En</option>
+                            <option value="2">Es</option>
+                        </select>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

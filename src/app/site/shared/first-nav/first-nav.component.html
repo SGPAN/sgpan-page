@@ -1,0 +1,30 @@
+<header>
+
+    <div id="first-nav-container" class="row" *ngFor="let info of companyInfo">
+
+        <div id="refill-left"></div>
+
+        <div id="nav-phone">
+            <p id="nav-text"> <i class="fas fa-phone"></i>{{info.telephone}}</p>
+        </div>
+
+        <div id="nav-email">
+            <p id="nav-text"> <i class="fas fa-envelope"></i>{{info.email}}</p>
+        </div>
+
+        <div id="refill-center"></div>
+
+        <div id="nav-donate">
+            <p *ngIf="languageID == 1" id="nav-text"> <i class="fas fa-hand-holding-usd"></i> Donate</p>
+            <p *ngIf="languageID == 2" id="nav-text"> <i class="fas fa-hand-holding-usd"></i> Donar</p>
+        </div>
+
+        <div id="nav-login">
+            <p routerLink="/login" id="nav-text"> <i class="fas fa-sign-in-alt"></i> Login</p>
+        </div>
+
+        <div id="refill-right"></div>
+
+    </div>
+
+</header>

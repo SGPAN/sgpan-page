@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div id="title-container" class="col-11">
+        <h1 id="event-title" *ngIf="languageID == 1">Events</h1>
+        <h1 id="event-title" *ngIf="languageID == 2">Eventos</h1>
+        <hr color="#774F38"/>
+    </div>
+    <div class="container col-10">
+        <swiper
+        [slidesPerView]="1"
+        [spaceBetween]="20"
+        [autoplay] = "{delay: 10000}"
+        [navigation]="true">
+            <ng-template *ngFor="let event of events" swiperSlide>
+                <div class="card">
+                    <div class="card-header row">
+                       <h2 class="col-md-11 col-lg-5">{{event.name}}</h2>
+                       <div id="date" class="col-md-11 col-lg-6">
+                        <h5>{{event.date | date:'mediumDate'}}</h5>
+                        <h5>{{event.date | date:'shortTime'}}</h5>
+                       </div>
+                    </div>
+                    <div class="card-body">
+                        <li class="list-group-item"><p class="card-text">{{event.description}}</p></li>
+                        <li class="list-group-item">{{event.equipment}}</li>
+                    </div>
+                    <div class="card-footer">
+                        <h3>{{event.location}}</h3>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>

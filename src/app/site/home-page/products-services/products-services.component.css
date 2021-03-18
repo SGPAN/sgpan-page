@@ -1,0 +1,30 @@
+#products-services-list > hr {
+  margin-bottom: 30px;
+}
+
+#products-services-list > h1 {
+  text-align: center;
+  color: #774f38;
+}
+
+.container-fluid{
+    background-color: rgb(240, 240, 240);
+}
+
+.row{
+  justify-content: center;
+}
+.card{
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.btn{
+  background-color: #0D8E95;
+  border-color: #0D8E95;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
