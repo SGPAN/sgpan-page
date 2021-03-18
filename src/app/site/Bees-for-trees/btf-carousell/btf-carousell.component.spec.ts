@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BtfCarousellComponent } from './btf-carousell.component';
 
@@ -6,7 +6,7 @@ describe('BtfCarousellComponent', () => {
   let component: BtfCarousellComponent;
   let fixture: ComponentFixture<BtfCarousellComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ BtfCarousellComponent ]
     })

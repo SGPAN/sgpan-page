@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TextWtdComponent } from './text-wtd.component';
 
@@ -6,7 +6,7 @@ describe('TextWtdComponent', () => {
   let component: TextWtdComponent;
   let fixture: ComponentFixture<TextWtdComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ TextWtdComponent ]
     })
